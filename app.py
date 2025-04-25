@@ -25,7 +25,7 @@ OPENROUTER_API_KEY = (
 # ────────────────────────────────────────────────────────────────────────────────
 # Helpers
 # ────────────────────────────────────────────────────────────────────────────────
-def send_chat_completion(messages, model="mistralai/mistral-7b-instruct", temperature=0.7):
+def send_chat_completion(messages, model="mistralai/mistral-7b-instruct free", temperature=0.7):
     """Call the OpenRouter /chat/completions endpoint and return the assistant reply."""
     if not OPENROUTER_API_KEY:
         raise RuntimeError(
@@ -82,11 +82,11 @@ with st.sidebar:
     model = st.selectbox(
         "OpenRouter model",
         options=[
-            "mistralai/mistral-7b-instruct",          # free
-            "thu-dongfang/zephyr-7b-beta",            # free
-            "undi95/toppy-m-7b",                      # free
-            "thebloke/neural-chat-7b-v3-1",           # free
-            "google/gemma-7b-it"                      # free
+            "mistralai/mistral-7b-instruct free",          # free
+            "mistralai/mistral-small-3.1-24b-instruct:free",            # free
+            "microsoft/mai-ds-r1:free",                      # free
+            "thudm/glm-z1-32b:free",           # free
+            "meta-llama/llama-4-maverick:free"                      # free
         ],
         index=0,
     )
